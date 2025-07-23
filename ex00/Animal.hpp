@@ -6,16 +6,16 @@
 #define RED "\033[31m"
 #define RESET "\033[0m"
 
-class Animal
+class AAnimal
 {
 protected:
 	std::string type;
 
 public:
-	Animal();
-	Animal(const Animal &other);
-	Animal &operator=(const Animal &other);
-	virtual ~Animal();
+	AAnimal();
+	AAnimal(const AAnimal &other);
+	AAnimal &operator=(const AAnimal &other);
+	virtual ~AAnimal();
 
 	virtual void makeSound() const;
 	std::string getType() const;

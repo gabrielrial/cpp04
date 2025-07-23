@@ -6,7 +6,7 @@
 #define YELLOW "\033[33m"
 #define RESET "\033[0m"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 private:
 	// atributos privados aquí

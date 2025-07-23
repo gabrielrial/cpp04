@@ -1,5 +1,5 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <iostream>
 #include "Brain.hpp"
@@ -11,14 +11,15 @@ class AAnimal
 {
 protected:
 	std::string type;
-
-public:
 	AAnimal();
 	AAnimal(const AAnimal &other);
 	AAnimal &operator=(const AAnimal &other);
+	
+public:
 	virtual ~AAnimal();
+	static AAnimal& getInstance();
 
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 	std::string getType() const;
 };
 
