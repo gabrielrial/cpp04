@@ -2,7 +2,6 @@
 #define AANIMAL_HPP
 
 #include <iostream>
-#include "Brain.hpp"
 
 #define RED "\033[31m"
 #define RESET "\033[0m"

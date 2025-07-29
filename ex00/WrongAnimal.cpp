@@ -2,7 +2,7 @@
 
 WrongAnimal::WrongAnimal()
 {
-    std::cout << BLUE << "[WrongCat] " << RESET << "Default Constructor called" << std::endl;
+    std::cout << BLUE << "[WrongAnimal] " << RESET << "Default Constructor called" << std::endl;
     type = "";
 }
 
@@ -24,10 +24,15 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 
 WrongAnimal::~WrongAnimal()
 {
-    // Destructor
+    std::cout << BLUE << "[WrongAnimal]" << RESET << " destructor called" << std::endl;
 }
 
 void WrongAnimal::makeSound() const
 {
-    std::cout << BLUE << "[WrongAnimal]" << RESET << " doesn't make any sound." << std::endl;
+    std::cout << BLUE << "WrongAnimal" << RESET << " doesn't make any sound." << std::endl;
+}
+
+std::string WrongAnimal::getType() const
+{
+    return type;
 }

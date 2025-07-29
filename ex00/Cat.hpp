@@ -6,18 +6,15 @@
 #define YELLOW "\033[33m"
 #define RESET "\033[0m"
 
-class Cat : public AAnimal
+class Cat : public Animal
 {
-private:
-	// atributos privados aquí
-
 public:
 	Cat();
 	Cat(const Cat &other);
 	Cat &operator=(const Cat &other);
 	~Cat();
 
-	void makeSound() const;
+	void makeSound(void) const;
 };
 
 #endif

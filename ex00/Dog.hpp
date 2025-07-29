@@ -6,17 +6,15 @@
 #define GREEN "\033[1;32m"
 #define RESET "\033[0m"
 
-class Dog : public AAnimal {
-private:
-    // atributos privados aquí
-
+class Dog : public Animal
+{
 public:
-    Dog();
-    Dog(const Dog &other);
-    Dog &operator=(const Dog &other);
-    ~Dog();
-    
-    void makeSound(void) const;
+	Dog();
+	Dog(const Dog &other);
+	Dog &operator=(const Dog &other);
+	~Dog();
+
+	void makeSound(void) const;
 };
 
 #endif

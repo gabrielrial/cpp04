@@ -1,13 +1,13 @@
 #include "Cat.hpp"
 
-Cat::Cat()
+Cat::Cat() : AAnimal()
 {
 	std::cout << YELLOW << "[Cat]" << RESET << " Default Constructor called" << std::endl;
 	type = "Cat";
 	brain = new Brain();
 }
 
-Cat::Cat(const Cat &other)
+Cat::Cat(const Cat &other) : AAnimal(other)
 {
 	std::cout << YELLOW << "[Cat]" << RESET << " Copy Constructor called" << std::endl;
 	this->type = other.type;
@@ -35,7 +35,7 @@ Cat::~Cat()
 
 void Cat::makeSound(void) const
 {
-	std::cout << type << " says: **Meeeoow**" << std::endl;
+	std::cout << YELLOW << type << RESET <<" says: **Meeeoow**" << std::endl;
 }
 
 void Cat::setBrainIdea(int index, const std::string &idea)

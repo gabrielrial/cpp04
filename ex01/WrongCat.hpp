@@ -8,16 +8,11 @@
 
 class WrongCat : public WrongAnimal
 {
-private:
-    // atributos privados aquí
-
 public:
-    WrongCat();
-    WrongCat(const WrongCat &other);
-    WrongCat &operator=(const WrongCat &other);
-    ~WrongCat();
-
-    void makeSound();
+	WrongCat();
+	WrongCat(const WrongCat &other);
+	WrongCat &operator=(const WrongCat &other);
+	~WrongCat();
 };
 
 #endif

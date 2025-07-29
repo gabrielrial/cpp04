@@ -1,13 +1,13 @@
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
 	std::cout << GREEN << "[Dog] " << RESET << "Default Constructor called" << std::endl;
 	type = "Dog";
 	brain = new Brain();
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal(other)
 {
 	std::cout << GREEN << "[Dog]" << RESET << " Copy Constructor called" << std::endl;
 	this->type = other.type;
@@ -35,7 +35,7 @@ Dog::~Dog()
 
 void Dog::makeSound(void) const
 {
-	std::cout << type << " says: **Guau Guau**" << std::endl;
+	std::cout << GREEN << type << RESET << " says: **Guau Guau**" << std::endl;
 }
 
 void Dog::setBrainIdea(int index, const std::string &idea)

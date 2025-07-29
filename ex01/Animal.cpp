@@ -1,32 +1,38 @@
 #include "Animal.hpp"
 
-AAnimal::AAnimal() {
+Animal::Animal()
+{
     std::cout << RED << "[Animal] " << RESET << "Default Constructor called" << std::endl;
+    type = "";
 }
 
-AAnimal::AAnimal(const AAnimal &other) {
+Animal::Animal(const Animal &other)
+{
     std::cout << RED << "[Animal]" << RESET << " Copy Constructor called" << std::endl;
     *this = other;
 }
 
-AAnimal &AAnimal::operator=(const AAnimal &other) {
+Animal &Animal::operator=(const Animal &other)
+{
     std::cout << RED << "[Aniaml]" << RESET << " Copy Assignment Operator called" << std::endl;
-    if (this != &other) {
-        // Copiar los atributos aquí
+    if (this != &other)
+    {
+        this->type = other.type;
     }
     return *this;
 }
 
-AAnimal::~AAnimal() {
+Animal::~Animal()
+{
     std::cout << RED << "[Animal]" << RESET << " destructor called" << std::endl;
 }
 
-void AAnimal::makeSound(void) const
+void Animal::makeSound(void) const
 {
-	std::cout << "This animal doesn't make any sound." << std::endl;
+    std::cout << RED << "Animal" << RESET << " This animal doesn't make any sound." << std::endl;
 }
 
-std::string AAnimal::getType(void) const
+std::string Animal::getType(void) const
 {
     return type;
 }

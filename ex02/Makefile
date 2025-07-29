@@ -1,10 +1,10 @@
-NAME = Aclass
+NAME = abstract_class
 
 CPP = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp AAnimal.cpp WrongAnimal.cpp Cat.cpp Dog.cpp WrongCat.cpp Brain.cpp
+SRC = main.cpp Animal.cpp WrongAnimal.cpp Cat.cpp Dog.cpp WrongCat.cpp Brain.cpp AAnimal.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

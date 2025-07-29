@@ -1,6 +1,7 @@
 #ifndef DOG_HPP
 #define DOG_HPP
 
+#include "Animal.hpp"
 #include "AAnimal.hpp"
 
 #define GREEN "\033[1;32m"
